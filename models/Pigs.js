@@ -35,14 +35,14 @@ Money.init(
       allowNull: false,
     },
     direct_deposit: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       validate: {
         isDate: true
       },
       allowNull: true
     },
     due_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       validate: {
         isDate: true
       },
@@ -69,10 +69,10 @@ Money.init(
 },
   {
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post',
+    modelName: 'pig',
   }
 );
 
