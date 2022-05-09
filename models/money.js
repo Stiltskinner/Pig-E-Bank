@@ -12,24 +12,27 @@ Money.init(
       autoIncrement: true
     },
     savings: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(10, 2),
     },
     checking: {
-      type: DataType.INTEGER,
+      type: DataTypes.DECIMAL(10, 2),
     },
     user_id: {
-
-    },
-    
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+    },   
   },
+
+},
   {
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post',
+    modelName: 'money',
   }
 );
 
 module.exports = Money;
-
