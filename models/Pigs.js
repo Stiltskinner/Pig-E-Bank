@@ -11,6 +11,33 @@ Pig.init(
       primaryKey: true,
       autoIncrement: true
     },
+    name: {
+      type: DataTypes.STRING,
+    },
+    is_savings: {
+      type: DataTypes.BOOLEAN,
+    },
+    amount_due: {
+      type: DataTypes.DECIMAL(10, 2),
+      validate: {
+        isDecimal: true
+      }
+    },
+    amount_held: {
+      type: DataTypes.DECIMAL(10, 2),
+      validate: {
+        isDecimal: true
+      }
+    },
+    direct_deposit: {
+      type: DataTypes.DATE,
+      validate: {
+        isDate: true
+      }
+    },
+    due_date: {
+
+    },
     user_id: {
       type: DataTypes.INTEGER,
     allowNull: false,
