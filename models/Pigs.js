@@ -21,22 +21,29 @@ Pig.init(
       type: DataTypes.DECIMAL(10, 2),
       validate: {
         isDecimal: true
-      }
+      },
+      allowNull: true
     },
     amount_held: {
       type: DataTypes.DECIMAL(10, 2),
       validate: {
         isDecimal: true
-      }
+      },
+      allowNull: false,
     },
     direct_deposit: {
       type: DataTypes.DATE,
       validate: {
         isDate: true
-      }
+      },
+      allowNull: true
     },
     due_date: {
-
+      type: DataTypes.DATE,
+      validate: {
+        isDate: true
+      },
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -57,4 +64,4 @@ Pig.init(
   }
 );
 
-module.exports = Post;
+module.exports = Pig;
