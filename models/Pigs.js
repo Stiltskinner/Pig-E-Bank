@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 const { Sequelize, Model, DataTypes } = require('sequelize');
+=======
+const { Sequelize, Pigs, DataTypes } = require('sequelize');
+>>>>>>> Stashed changes
 const sequelize = require('../config/config');
 
 class Pigs extends Model {}
@@ -46,11 +50,15 @@ Pigs.init(
       allowNull: true,
     },
     user_id: {
+<<<<<<< Updated upstream
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
       },
+=======
+    
+>>>>>>> Stashed changes
 
 
     },
@@ -64,4 +72,8 @@ Pigs.init(
   }
 );
 
+<<<<<<< Updated upstream
 module.exports = Pigs;
+=======
+module.exports = Pig;
+>>>>>>> Stashed changes
