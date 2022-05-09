@@ -1,9 +1,9 @@
-const { Sequelize, Model, DataTypes } = require('sequelize');
+const { Sequelize, Money, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-class Pig extends Model {}
+class Money extends Model {}
 
-Pig.init(
+Money.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,6 +11,9 @@ Pig.init(
       primaryKey: true,
       autoIncrement: true
     },
+<<<<<<< HEAD
+    savings: {
+=======
     name: {
       type: DataTypes.STRING,
     },
@@ -46,15 +49,24 @@ Pig.init(
       allowNull: true,
     },
     user_id: {
+>>>>>>> 5bd12418ff3dbec4fde866eb7dc59e865282feba
       type: DataTypes.INTEGER,
-    allowNull: false,
-    unique: false,
-    references: {
-    model: 'user',
-    key: 'id',
-  }
-}
-  },
+      allowNull: false,
+    },
+    checking: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    user_id: {
+      type: DataType.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+
+
+    },
+},
   {
     sequelize,
     timestamps: false,
@@ -64,4 +76,9 @@ Pig.init(
   }
 );
 
+<<<<<<< HEAD
+module.exports = Post;
+
+=======
 module.exports = Pig;
+>>>>>>> 5bd12418ff3dbec4fde866eb7dc59e865282feba
