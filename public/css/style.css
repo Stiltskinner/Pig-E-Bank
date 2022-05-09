@@ -1,0 +1,37 @@
+:root {
+    --main-bg-color: #fadde1;
+    --main--color: #FFCAD4;
+    --main--color: #FFC4D6;
+    --main--color: #F4ACB7;
+    --main--color: #FFACC5;
+    --main--color: #FFA6C1;
+    --main--color: #FF97B7;
+    --main--color: #FF87AB;
+    --main-nav-color: #FF5D8F;
+}
+body {
+    background-color: var(--main-bg-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-nav-color);
+    height: 4rem;
+}
+
+nav a img {
+    margin-left: 2rem;
+}
+.playMoneyAmount {
+    display: inline;
+    background-color: #FF5D8F;
+    border: 1px solid black;
+}
+
+#signOut {
+    text-decoration: none;
+    color: black;
+    margin-right: 3rem;
+}
