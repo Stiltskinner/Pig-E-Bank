@@ -23,6 +23,13 @@ header {
     width: 100%;
 }
 
+#main-view {
+    margin: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 nav a img {
     margin-left: 2rem;
 }
@@ -38,17 +45,39 @@ nav a img {
     margin-right: 2rem;
 }
 
+#signOut {
+    text-decoration: none;
+    color: black;
+    margin-right: 3rem;
+}
+
+#column-one {
+}
+
 #playMoney {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: none;
-    margin-top:3rem;
+    margin-top:2rem;
 }
 
 #playMoneyHeader {
     text-align: center;
+    margin-bottom: 1rem;
 }
+
 #playMoneyFooter {
     text-align: center;
     background-color: var(--main-feed-color);
+    width:80%;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px white;
+    border: solid white 2px;
+}
+#playMoneyFooter:active{
+    box-shadow: 2px 2px var(--main-nav-color);
 }
 #playMoneyFooter a {
     text-decoration: none;
@@ -56,25 +85,42 @@ nav a img {
 }
 
 #playMoneyAmount {
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #FF5D8F;
+    border-radius: 25px;
+    border: solid black 2px;
+    box-shadow: 10px 10px;
+}
+#playMoneyAmount:hover {
+    width: 93%;
+    box-shadow: 8px 8px;
+}
+
+#dollar-sign {
+    margin: 0;
 }
 
 .accounts {
     background-color: white;
     padding: 1rem;
     border-radius: 25px;
+    border: black 2px solid;
+    box-shadow: 10px 10px var(--main-nav-color);
+    margin-top: 2rem;
 }
 
 #savings {
-
     border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3rem 0;
+    margin: 2rem 0;
+}
+#savingsTitle {
+    margin: 0;
 }
 
 #savingsFooterTotal {
@@ -99,17 +145,24 @@ nav a img {
     justify-content: center;
     align-items: center;
     background-color: #FF5D8F;
-    border-radius: 10px;
+    border-radius: 40px;
     width: 100%;
 }
 
-#checkings {
+#savingsLink {
+    text-decoration: none;
+    color: black
+}
 
+#checkings {
     border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 3rem 0;
+}
+#checkingsTitle {
+    margin:0;
 }
 #checkingsFooterTotal {
     text-align: center;
@@ -133,12 +186,16 @@ nav a img {
     justify-content: center;
     align-items: center;
     background-color: #FF5D8F;
-    border-radius: 10px;
+    border-radius: 40px;
     width: 100%;
 }
 
-#signOut {
+#checkingsLink {
     text-decoration: none;
-    color: black;
-    margin-right: 3rem;
+    color: black
+}
+
+footer {
+    text-align: center;
+    
 }

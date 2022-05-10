@@ -1,8 +1,8 @@
-<div class="column col-4">
+
     <div class="recentTransactions">
       <div class="card">
         <div id="recentTransactionsHeader" class="card-header">
-          Recent Transactions {{pig.name}}
+          Recent Transactions 
         </div>
         <div id="recentTransactions" class="card-body">
           <p>
@@ -19,4 +19,9 @@ $ 32.32 HEBCONGRESS MAY 1 2020, 04:45:21PM
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="pigs">
+      {{#each pigs as | pig |}}
+      <h2>{{pig.name}}</h2>
+      {{/each}}
+    </div>
