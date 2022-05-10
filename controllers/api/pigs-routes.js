@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Pigs } = require('../../models/');
+const withAuth = require('../../utils/auth');
 
 // Get all pigs
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
       const pigsData = await Pigs.findAll({
         include: [{ all: true, nested: true }],
@@ -14,7 +15,7 @@ router.get('/', async (req, res) => {
   });
 
   // get one pig
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
       const pigsData = await Pigs.findByPk(req.params.id, {
         include: [{ all: true, nested: true }],
@@ -29,5 +30,17 @@ router.get('/:id', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+// Make a pig
+router.post('/', withAuth, async (req, res) => {
+const body = req.body;
+
+try {
+    const newPost = await Post.create({ ...body, user_id: req.session.userId });
+    res.json(newPost);
+} catch (err) {
+    res.status(500).json(err);
+}
+});
 
   module.exports = router;

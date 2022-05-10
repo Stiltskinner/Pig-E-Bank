@@ -4,13 +4,13 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
   try {
     const newUser = await User.create({
-      username: req.body.username,
+      email: req.body.email,
       password: req.body.password,
     });
 
     req.session.save(() => {
       req.session.userId = newUser.id;
-      req.session.username = newUser.username;
+      req.session.email = newUser.email;
       req.session.loggedIn = true;
 
       res.json(newUser);
@@ -24,10 +24,10 @@ router.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({
       where: {
-        username: req.body.username,
+        email: req.body.email,
       },
     });
-
+console.log("user info", user)
     if (!user) {
       res.status(400).json({ message: 'No user account found!' });
       return;
@@ -42,7 +42,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.userId = user.id;
-      req.session.username = user.username;
+      req.session.email = user.email;
       req.session.loggedIn = true;
 
       res.json({ user, message: 'You are now logged in!' });
