@@ -27,7 +27,6 @@ router.post('/login', async (req, res) => {
         email: req.body.email,
       },
     });
-console.log("user info", user)
     if (!user) {
       res.status(400).json({ message: 'No user account found!' });
       return;
