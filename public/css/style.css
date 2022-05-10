@@ -54,6 +54,12 @@ nav a img {
 #column-one {
 }
 
+#column-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 #playMoney {
     display: flex;
     flex-direction: column;
@@ -93,6 +99,7 @@ nav a img {
     border-radius: 25px;
     border: solid black 2px;
     box-shadow: 10px 10px;
+
 }
 #playMoneyAmount:hover {
     width: 93%;
@@ -110,6 +117,10 @@ nav a img {
     border: black 2px solid;
     box-shadow: 10px 10px var(--main-nav-color);
     margin-top: 2rem;
+}
+
+.accounts:hover {
+    box-shadow: 8px 8px var(--main-nav-color);
 }
 
 #savings {
@@ -148,6 +159,7 @@ nav a img {
     background-color: #FF5D8F;
     border-radius: 40px;
     width: 100%;
+    box-shadow: 8px 8px black;
 }
 
 #savingsAmount:hover {
@@ -220,6 +232,7 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    height: 1rem;
 }
 #transactionsList {
     padding: 0;
@@ -228,4 +241,9 @@ footer {
 #transactionsListEl {
     text-decoration: none;
     list-style: none;
+}
+
+.pigs {
+    border: black solid 2px;
+    border-radius: 25px;
 }
