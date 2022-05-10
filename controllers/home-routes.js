@@ -1,7 +1,12 @@
 const router = require('express').Router();
 const {  } = require('../models/');
 
-// get all posts for homepage
+// THIS IS JUST FOR TESTING PURPOSES IT WILL CHANGE IN THE FUTURE
+router.get('/dashboard', (req, res) => {
+  res.render('main-view', {
+    layout: 'dashboard',
+  });
+});
 
 router.get('/login', (req, res) => {
   

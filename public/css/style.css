@@ -1,0 +1,144 @@
+:root {
+    --main-bg-color: #fadde1;
+    --main-feed-color: #c7c7c7;
+    --main-nav-color: #FF5D8F;
+    --color1: #FFCAD4;
+    --color2: #FFC4D6;
+    --color3: #F4ACB7;
+    --color4: #FFACC5;
+    --color5: #FFA6C1;
+    --color6: #FF97B7;
+    --color7: #FF87AB;
+}
+body {
+    background-color: var(--main-bg-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-nav-color);
+    height: 4rem;
+    width: 100%;
+}
+
+nav a img {
+    margin-left: 2rem;
+}
+
+#login {
+    text-decoration: none;
+    color:black;
+    margin-right: 2rem;
+}
+#signup {
+    text-decoration: none;
+    color:black;
+    margin-right: 2rem;
+}
+
+#playMoney {
+    border: none;
+    margin-top:3rem;
+}
+
+#playMoneyHeader {
+    text-align: center;
+}
+#playMoneyFooter {
+    text-align: center;
+    background-color: var(--main-feed-color);
+}
+#playMoneyFooter a {
+    text-decoration: none;
+    color: black;
+}
+
+#playMoneyAmount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF5D8F;
+}
+
+.accounts {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+#savings {
+
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+#savingsFooterTotal {
+    text-align: center;
+    background-color: var(--main-feed-color);
+    width:80%;
+    border-radius: 0 0 10px 10px;
+}
+#savingsViewPigsFooter {
+    text-align: center;
+    background-color: var(--main-feed-color);
+    width:60%;
+    border-radius: 0 0 10px 10px;
+}
+.savingsFooter a {
+    text-decoration: none;
+    color: black;
+}
+
+#savingsAmount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF5D8F;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#checkings {
+
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+}
+#checkingsFooterTotal {
+    text-align: center;
+    background-color: var(--main-feed-color);
+    width:80%;
+    border-radius: 0 0 10px 10px;
+}
+#checkingsViewPigsFooter {
+    text-align: center;
+    background-color: var(--main-feed-color);
+    width:60%;
+    border-radius: 0 0 10px 10px;
+}
+.checkingsFooter a {
+    text-decoration: none;
+    color: black;
+}
+
+#checkingsAmount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF5D8F;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#signOut {
+    text-decoration: none;
+    color: black;
+    margin-right: 3rem;
+}
