@@ -191,7 +191,7 @@ nav a img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FF5D8F;
+    background-color: var(--main-nav-color);
     border-radius: 40px;
     width: 100%;
 }

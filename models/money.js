@@ -9,7 +9,6 @@ Money.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
     },
     savings: {
       type: DataTypes.DECIMAL(10, 2),
