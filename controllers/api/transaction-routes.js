@@ -49,18 +49,30 @@ router.post('/', withAuth, async (req, res) => {
 // Delete a Transaction
 router.delete('/:id', withAuth, async (req, res) => {
   try {
+<<<<<<< Updated upstream
     const affectedRows =  Transaction.destroy({
+=======
+    const transactionData = await Transaction.destroy({
+>>>>>>> Stashed changes
       where: {
         id: req.params.id,
+        user_id: req.session.user_id,
 
       },
     });
+<<<<<<< Updated upstream
     console.log(affectedRows)
     if (!affectedRows) {
       res.status(404).json({message: 'no Transactions found with that id!'}).end();
+=======
+    if (!transactionData) {
+      res.status(404).json({message: 'no Transactions found with that id!'});
+      return;
+>>>>>>> Stashed changes
     }
-    res.status(200),json({message: `Transaction id ${req.params.id} deleted!`}).end();
 
+    
+    res.status(200).json(transactionData); 
   } catch (err) {
     res.status(500).json(err);
   }
