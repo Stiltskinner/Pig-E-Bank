@@ -1,0 +1,15 @@
+
+  <div id="recentTransactions" class="card">
+    <div id="recentTransactionsHeader" class="card-header">
+      Recent Transactions 
+    </div>
+    <div id="recentTransactionsBody" class="card-body">
+      <ul id="transactionsList">
+        {{#each transactions as | transaction |}}
+        <li id="transactionsListEl">$ {{transaction.amount}} - {{transaction.transaction}} - {{transaction.createdAt}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+
