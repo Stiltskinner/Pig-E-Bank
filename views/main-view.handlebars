@@ -1,0 +1,27 @@
+
+    <div class="recentTransactions">
+      <div class="card">
+        <div id="recentTransactionsHeader" class="card-header">
+          Recent Transactions 
+        </div>
+        <div id="recentTransactions" class="card-body">
+          <p>
+$ 12.66 HEBCONGRESS MAY 5 2020, 12:30:20PM
+
+$ 44.60 NOODLEHOUSE MAY 4 2020, 6:45:20PM
+
+$ 30.00 Transfer to Savings Pig MAY 4 2020, 01:30:08PM
+
+$ 120.00 TMOBILE AUTOPAY MAY 2 2020, 01:45:09AM
+
+$ 32.32 HEBCONGRESS MAY 1 2020, 04:45:21PM
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pigs">
+      {{#each pigs as | pig |}}
+      <h2>{{pig.name}}</h2>
+      {{/each}}
+    </div>
