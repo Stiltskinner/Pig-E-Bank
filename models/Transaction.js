@@ -12,16 +12,18 @@ Transaction.init(
       autoIncrement: true,
     },
     transaction_amt: {
-      types:DataTypes.DECIMAL(10,2),
+      type: DataTypes.DECIMAL(10,2),
       allowNull: false,
     },
     user_id: {
+      type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
       },
     },
     pigs_id: {
+      type: DataTypes.INTEGER,
       references: {
         model:'pigs',
         key: 'id'
@@ -31,6 +33,7 @@ Transaction.init(
       type:DataTypes.BOOLEAN,
     },
     money_id: {
+      type: DataTypes.INTEGER,
       references: {
         model: 'money',
         key: 'id',
