@@ -1,15 +1,47 @@
 <header>
   <nav class="nav">
     <a class="navbar-brand" href="#">
-      <img src="/Pig Logo White.png" width="50" alt="pigE logo">
+      <img src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/Pig%20Logo%20White.png?raw=true" width="50" alt="pigE logo">
       </a>
   </nav>
   <a id="signup" href="/signup">Sign Up</a>
 </header>
 
-<div>
+<div id="body">
   {{!-- this is where the login form goes! we will probably make a partial to insert into here --}}
-  <h1>FORM GOES HERE</h1>
+  <div class="container">
+      <div class="infobox">
+        <img src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/Pig%20Logo%20White.png?raw=true" alt="Italian Trulli" />
+        <h1>Welcome to Pig-E</h1>
+        <h1>Log In</h1>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Enter Email:</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Enter Password:</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <p>Don't have an account? Create one <a href="/signup">here!</a></p>
+          <button type="login" class="btn btn-primary" id="login_button">
+            Log In
+          </button>
+        </form>
+      </div>
+    </div>
 </div>
 
 <script src="/js/login.js"></script>

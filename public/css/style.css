@@ -205,6 +205,11 @@ footer {
     text-align: center;
     
 }
+
+#body {
+    background-image: url("https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig%20background%20blur.png?raw=true");
+}
+
 #recentTransactions {
     box-shadow: 10px 10px var(--color7);
     border-radius: 25px;
@@ -228,4 +233,18 @@ footer {
 #transactionsListEl {
     text-decoration: none;
     list-style: none;
+}
+
+form {
+    width: 100%;
+}
+
+#submit_button {
+    background-color: var(--main-nav-color);
+    border-color: white;
+}
+
+#login_button {
+    background-color: var(--main-nav-color);
+    border-color: white;
 }
