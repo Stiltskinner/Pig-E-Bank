@@ -49,12 +49,13 @@ router.post('/', withAuth, async (req, res) => {
 // Delete a Transaction
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const affectedRows = Transaction.destroy({
+    const affectedRows =  Transaction.destroy({
       where: {
         id: req.params.id,
 
       },
     });
+    console.log(affectedRows)
     if (!affectedRows) {
       res.status(404).json({message: 'no Transactions found with that id!'}).end();
     }
