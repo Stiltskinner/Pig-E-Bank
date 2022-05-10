@@ -31,7 +31,7 @@ router.put('/', withAuth, async (req, res) => {
   try {
     const money = await Money.update(req.body, {
       where: {
-        id: 1,
+        id: req.params.id,
       },
     });
     money.savings = req.body.savings;
@@ -50,7 +50,7 @@ router.delete('/', withAuth, async (req, res) => {
   try {
     const affectedRows = Money.destroy({
       where: {
-        id: 2,
+        id: req.params.id,
       },
     });
     if (!affectedRows) {
