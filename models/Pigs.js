@@ -1,9 +1,9 @@
-const { Sequelize, Money, DataTypes } = require('sequelize');
+const { Sequelize, Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-class Money extends Model {}
+class Pigs extends Model {}
 
-Money.init(
+Pigs.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,9 +11,6 @@ Money.init(
       primaryKey: true,
       autoIncrement: true
     },
-<<<<<<< HEAD
-    savings: {
-=======
     name: {
       type: DataTypes.STRING,
     },
@@ -49,16 +46,7 @@ Money.init(
       allowNull: true,
     },
     user_id: {
->>>>>>> 5bd12418ff3dbec4fde866eb7dc59e865282feba
       type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    checking: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    user_id: {
-      type: DataType.INTEGER,
       references: {
         model: 'user',
         key: 'id',
@@ -72,13 +60,8 @@ Money.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'pig',
+    modelName: 'pigs',
   }
 );
 
-<<<<<<< HEAD
-module.exports = Post;
-
-=======
-module.exports = Pig;
->>>>>>> 5bd12418ff3dbec4fde866eb7dc59e865282feba
+module.exports = Pigs;
