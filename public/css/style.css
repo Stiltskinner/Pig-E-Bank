@@ -13,6 +13,9 @@
 body {
     background-color: var(--main-bg-color);
 }
+#body {
+    background-image: url("https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig%20background%20blur.png?raw=true");
+}
 
 header {
     display: flex;
@@ -49,6 +52,15 @@ nav a img {
     text-decoration: none;
     color: black;
     margin-right: 3rem;
+}
+#submit_button {
+    background-color: var(--main-nav-color);
+    border-color: white;
+}
+
+#login_button {
+    background-color: var(--main-nav-color);
+    border-color: white;
 }
 
 #column-one {
@@ -213,20 +225,14 @@ nav a img {
     color: black
 }
 
-footer {
-    text-align: center;
-    
-}
-
-#body {
-    background-image: url("https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig%20background%20blur.png?raw=true");
-}
-
 #recentTransactions {
+    margin-top: 0;
     box-shadow: 10px 10px var(--color7);
     border-radius: 25px;
     border: var(--main-nav-color) solid 2px;
     width: 80%;
+    height: fit-content;
+
 }
 
 #recentTransactionsHeader{
@@ -237,7 +243,12 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 1rem;
+    padding: 1rem 1rem;
+    flex: 0 0 auto;
+}
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 #transactionsList {
     padding: 0;
@@ -248,20 +259,23 @@ footer {
     list-style: none;
 }
 
-.pigs {
-    border: black solid 2px;
+#pigs {
+    /* border: black solid 2px; */
+    border-radius: 25px;
+    width: 90%;
+}
+.accordion-button {
+    border-radius:  25px !important; 
+    
+}
+#pig-item {
     border-radius: 25px;
 }
+
 form {
     width: 100%;
 }
 
-#submit_button {
-    background-color: var(--main-nav-color);
-    border-color: white;
-}
-
-#login_button {
-    background-color: var(--main-nav-color);
-    border-color: white;
+footer {
+    text-align: center; 
 }
