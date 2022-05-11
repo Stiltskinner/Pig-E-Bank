@@ -12,10 +12,24 @@
 
 <body>
   <header>
-    <nav class="nav">
+    <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+    <img src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/Pig%20Logo%20White.png?raw=true" width="50" alt="pigE logo">
+      </a>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header" id="menuHeader">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Create a Pig</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>Create your Pig here:</div>
+    <div>A "Pig" is a pool of money you can add to in order to save up towards your goal.</div>
+
+  </div>
+</div>
+    <nav class="nav" id="pigLog">
       <a class="navbar-brand" href="#">
         <img src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/Pig%20Logo%20White.png?raw=true" width="50" alt="pigE logo">
-        </a>
+      </a>
     </nav>
       <p id="sign-out">Sign Out</p>
   </header>
@@ -38,4 +52,3 @@
 
 </body>
 </html>
-
