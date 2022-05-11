@@ -10,10 +10,8 @@
     --color6: #FF97B7;
     --color7: #FF87AB;
 }
+
 body {
-    background-color: var(--main-bg-color);
-}
-#body {
     background-image: url("https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig%20background%20blur.png?raw=true");
 }
 
@@ -25,6 +23,10 @@ header {
     height: 4rem;
     width: 100%;
 }
+
+
+form {
+    width: 100%;
 
 .container {
     display: flex;
@@ -89,12 +91,18 @@ nav a img {
 }
 
 #column-one {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 #column-two {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #playMoney {
@@ -103,28 +111,12 @@ nav a img {
     align-items: center;
     border: none;
     margin-top:2rem;
+    width: 90%;
 }
 
 #playMoneyHeader {
     text-align: center;
     margin-bottom: 1rem;
-}
-
-#playMoneyFooter {
-    text-align: center;
-    background-color: var(--main-feed-color);
-    width:80%;
-    margin-top: 1rem;
-    border-radius: 10px;
-    box-shadow: 2px 2px white;
-    border: solid white 2px;
-}
-#playMoneyFooter:active{
-    box-shadow: 2px 2px var(--main-nav-color);
-}
-#playMoneyFooter a {
-    text-decoration: none;
-    color: black;
 }
 
 #playMoneyAmount {
@@ -142,6 +134,23 @@ nav a img {
     width: 93%;
     box-shadow: 8px 8px;
 }
+#playMoneyFooter {
+    text-align: center;
+    background-color: var(--main-feed-color);
+    width:80%;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px white;
+    border: solid white 2px;
+    box-shadow: 2px 2px 5px #ff5d9065;
+}
+#playMoneyFooter:active{
+    box-shadow: 2px 2px var(--main-nav-color);
+}
+#playMoneyFooter a {
+    text-decoration: none;
+    color: black;
+}
 
 #dollar-sign {
     margin: 0;
@@ -154,6 +163,7 @@ nav a img {
     border: black 2px solid;
     box-shadow: 10px 10px var(--main-nav-color);
     margin-top: 2rem;
+    width: 90%;
 }
 
 .accounts:hover {
@@ -172,24 +182,35 @@ nav a img {
 }
 
 #savingsFooterTotal {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--main-feed-color);
     width:80%;
     border-radius: 10px;
     margin-top: 1rem;
 }
+
 #savingsViewPigsFooter {
     text-align: center;
     background-color: var(--main-feed-color);
     width:60%;
-    border-radius: 0 0 10px 10px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px white;
+    border: solid white 2px;
+    box-shadow: 2px 2px 5px #ff5d9065;
+}
+#savingsViewPigsFooter:active{
+    box-shadow: 2px 2px var(--main-nav-color);
 }
 .savingsFooter a {
     text-decoration: none;
     color: black;
+    
 }
 
-#savingsAmount {
+#savingsHeader {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,7 +220,7 @@ nav a img {
     box-shadow: 8px 8px black;
 }
 
-#savingsAmount:hover {
+#savingsHeader:hover {
     width: 98%;
     box-shadow: 5px 5px black;
 }
@@ -220,31 +241,52 @@ nav a img {
     margin:0;
 }
 #checkingsFooterTotal {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--main-feed-color);
     width:80%;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
+    margin-top: 1rem;
 }
 #checkingsViewPigsFooter {
     text-align: center;
     background-color: var(--main-feed-color);
     width:60%;
-    border-radius: 0 0 10px 10px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px white;
+    border: solid white 2px;
+    box-shadow: 2px 2px 5px #ff5d9065;
 }
+
+#checkingsViewPigsFooter:hover{
+    box-shadow: 0 0;
+}
+
+#checkingsViewPigsFooter:active{
+    box-shadow: 2px 2px var(--main-nav-color);
+}
+
 .checkingsFooter a {
     text-decoration: none;
     color: black;
 }
 
-#checkingsAmount {
+#checkingsHeader {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-nav-color);
+    background-color: #FF5D8F;
     border-radius: 40px;
     width: 100%;
+    box-shadow: 8px 8px black;
 }
 
+#checkingsHeader:hover {
+    width: 98%;
+    box-shadow: 5px 5px black;
+}
 #checkingsLink {
     text-decoration: none;
     color: black
@@ -295,10 +337,6 @@ ul {
 }
 #pig-item {
     border-radius: 25px;
-}
-
-form {
-    width: 100%;
 }
 
 footer {

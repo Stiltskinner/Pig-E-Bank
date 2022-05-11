@@ -1,0 +1,70 @@
+
+  <div id="welcome"><h2>Welcome, {{user.first_name}}!</h2></div>
+    <div id="playMoney" class="" style="max-width: 18rem;">
+      <div id="playMoneyHeader" class="">Play Money</div>
+        <div id="playMoneyAmount" class="card-body">
+          <h5 id="dollar-sign"class="card-title">
+            $
+          </h5>
+          <p class="card-text">
+            420.69
+          </p>
+        </div>
+      <div id="playMoneyFooter"class="card-footer">
+        <a href="/feed">
+        Feed Pig
+        </a>
+      </div>
+    </div>
+
+  <section class="accounts" style="max-width: 18rem;">
+    <div id="savings">
+      <div id="savingsHeader" class="card-body">
+        <h6 id="savingsTitle" class="card-title">
+          <a id="savingsLink" href="/savings">
+          Savings
+          </a>
+        </h6>
+      </div>
+    <div id="savingsFooterTotal" class="card-footer savingsFooter">
+      <a id="savingsLink" href="/savings">
+      $
+      </a>
+      <a id="savingsLink" href="/savings">
+      {{user.money.savings}}
+      </a>
+    </div>
+      <div id="savingsViewPigsFooter"class="card-footer savingsFooter">
+        <a href="/feed">
+        View Pigs
+        </a>
+      </div>
+    </div>
+
+    <div class="dropdown-divider"></div>
+
+    <div id="checkings" style="max-width: 18rem;">
+      <div id="checkingsHeader" class="card-body">
+        <h6 id="checkingsTitle" class="card-title">
+          <a id="checkingsLink" href="/checkings">
+          Checkings
+          </a>
+        </h6>
+      </div>
+      <div id="checkingsFooterTotal" class="card-footer checkingsFooter">
+        <a id="checkingsLink" href="/checkings">
+          $
+        </a>
+        <a id="checkingsLink" href="/checkings">
+        {{user.money.checking}}
+        </a>
+      </div>
+      <div id="checkingsViewPigsFooter"class="card-footer checkingsFooter">
+        <a href="/feed">
+        View Pigs
+        </a>
+      </div>
+    </div>
+  </section>
+
+

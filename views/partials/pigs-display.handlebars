@@ -1,3 +1,5 @@
+<div class="accordion accordion-flush" id="pigs"></div>
+{{#with user.pigs as | pigs |}}
 {{#each pigs as | pig |}}
   <div class="accordion-item" id="pig-item">
     <h2 class="accordion-header" id="flush-heading{{pig.id}}">
@@ -10,4 +12,5 @@
     </div>
   </div>
 {{/each}}
-  
+{{/with}}
+</div>

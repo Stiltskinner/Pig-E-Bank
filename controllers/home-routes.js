@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pigs, User } = require('../models/');
+const { Pigs, User, Money  } = require('../models/');
 
 // THIS IS JUST FOR TESTING PURPOSES IT WILL CHANGE IN THE FUTURE
 
@@ -34,21 +34,16 @@ const transactions = [{
 ]
 router.get('/dashboard', async (req, res) => {
   const userData = await User.findByPk(1, {
+    include: [{ model: Pigs}, { model: Money }],
     where: {
       id: 1
     },
 })
-  const pigData = await Pigs.findAll({
-    where: {
-      user_id: 1
-    },
-  });
-
-  const pigs = pigData.map((pig) => pig.get({ plain: true }));
+  
   const user = userData.get({ plain: true });
-  res.render('main-view', {
+  console.log(user)
+  res.render('accounts', {
     layout: 'dashboard',
-    pigs,
     user,
     transactions
   });
