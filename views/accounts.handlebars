@@ -21,21 +21,21 @@
     <div id="savings">
       <div id="savingsHeader" class="card-body">
         <h6 id="savingsTitle" class="card-title">
-          <a id="savingsLink" href="/savings">
+          <a id="savingsLink" id="pig-view-savings" href="/dashboard/savings">
           Savings
           </a>
         </h6>
       </div>
     <div id="savingsFooterTotal" class="card-footer savingsFooter">
-      <p>
+      <p id="savingsLink">
       $
       </p>
-      <p href="/savings">
+      <p id="savingsLink">
       {{user.money.savings}}
       </p>
     </div>
       <div id="savingsViewPigsFooter"class="card-footer savingsFooter">
-        <a id="savingsLink" href="/savings">
+        <a href="/dashboard/savings">
         View Pigs
         </a>
       </div>
@@ -46,25 +46,24 @@
     <div id="checkings" style="max-width: 18rem;">
       <div id="checkingsHeader" class="card-body">
         <h6 id="checkingsTitle" class="card-title">
-          <a id="checkingsLink" href="/checkings">
+          <a id="pig-view-checking" href="/dashboard/checking">
           Checkings
           </a>
         </h6>
       </div>
       <div id="checkingsFooterTotal" class="card-footer checkingsFooter">
-        <a id="checkingsLink" href="/checkings">
+        <p id="checkingsLink">
           $
-        </a>
-        <a id="checkingsLink" href="/checkings">
+        </p>
+        <p id="checkingsLink">
         {{user.money.checking}}
-        </a>
+        </p>
       </div>
       <div id="checkingsViewPigsFooter"class="card-footer checkingsFooter">
-        <a href="/feed">
+        <a href="/dashboard/checking">
         View Pigs
         </a>
       </div>
     </div>
   </section>
-
 
