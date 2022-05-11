@@ -13,14 +13,22 @@
       <div id="pig-data-body"class="accordion-body">
         <h3 id="pig-name-dropdown">{{pig.name}}</h3>
         <div id="pig-settings">
-          <a id="edit-pigs" href="/editpig">edit</a>
+          <a id="pig-edit" href="/editpig">edit</a>
           <div class="dropdown-divider"></div>
         <button id="box-pig-btn" class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{pig.id}}" aria-expanded="false" aria-controls="flush-collapse{{pig.id}}">
           <img id="" src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/Pig%20Logo%20White.png?raw=true" style="width: 30px;" alt="whitepiglogo">
         </button>
         </div>
         <ul id="pigs-list">
+          {{#if pig.is_savings}}
+          <li id="pig-type">
+            Savings
           <li>
+          {{else}}
+          <li id="pig-type">
+            Checkings
+          <li>
+          {{/if}}
             $ {{pig.amount_held}} {{#if pig.amount_due}} / $ {{pig.amount_due}} {{/if}}
           </li>
           {{#if pig.due_date}}
@@ -32,7 +40,7 @@
           </li> 
           {{/if}} 
         </ul>
-        <a href="/stats">Stats</a>
+        <a id="pig-stats" href="/stats">stats <i class="bi bi-arrow-right-short"></i></a>
       </div>
     </div>
   </div>

@@ -400,15 +400,23 @@ img, svg {
     margin:0;
 }
 
-#edit-pigs {
+#pig-edit {
     text-decoration: none;
     color: var(--main-nav-color);
     margin: 0;
 }
- #pig-settings {
+#pig-settings {
      display: flex;
      align-items: center;
- }
+}
+#pig-type {
+    color: var(--color7);
+    font-size: 1.5rem;
+}
+#pig-stats {
+    text-decoration: none;
+    color: var(--main-nav-color);
+}
 
 #pig-data-body {
     margin: 2rem 0 1rem 0;
