@@ -25,7 +25,9 @@ header {
     width: 100%;
 }
 
-
+#logo {
+    margin-left: 2rem;
+}
 form {
     width: 100%;
 }
