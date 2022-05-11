@@ -77,10 +77,13 @@ nav a img {
     margin-right: 2rem;
 }
 
-#signOut {
+#sign-out {
     text-decoration: none;
     color: black;
     margin-right: 3rem;
+    margin-bottom: 0;
+    cursor: pointer;
+
 }
 #submit_button {
     background-color: var(--main-nav-color);
@@ -364,7 +367,8 @@ ul {
 
 #pigsList{
     list-style: none;
-    padding-left: 0
+    padding-left: 0;
+    width: 100%;
 }
 #pig-header {
     position: relative;
@@ -387,14 +391,21 @@ ul {
     position: absolute;
     right: 1rem;
 }
+#box-pig-btn {
+    border: none;
+    background-color: var(--main-bg-color);
+    margin: 0;
+}
 #pig-data-body {
     margin: 2rem 0;
     border-radius: 10px;
     border: black 2px solid;
     background-color: var(--main-bg-color);
+    display: flex;
 }
 #pig-name-dropdown {
     margin: 0;
+    
 }
 
 .accordion-item:last-of-type .accordion-button.collapsed {
