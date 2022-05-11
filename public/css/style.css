@@ -78,10 +78,13 @@ background-color: var(--main-nav-color);
     margin-right: 2rem;
 }
 
-#signOut {
+#sign-out {
     text-decoration: none;
     color: black;
     margin-right: 3rem;
+    margin-bottom: 0;
+    cursor: pointer;
+
 }
 #submit_button {
     background-color: var(--main-nav-color);
@@ -359,14 +362,6 @@ ul {
     border: 0;
 }
 
-#pig-name-amount {
-    margin:0;
-}
-
-#pigsList{
-    list-style: none;
-    padding-left: 0
-}
 #pig-header {
     position: relative;
     display: flex;
@@ -388,14 +383,55 @@ ul {
     position: absolute;
     right: 1rem;
 }
+#box-pig-btn {
+    border: none;
+    background-color: var(--main-bg-color);
+    margin: 3px 0 0 0;
+}
+
+img, svg {
+    vertical-align: 0;
+}
+
+#pig-name-dropdown {
+    margin: 0; 
+}
+#pig-name-amount {
+    margin:0;
+}
+
+#pig-edit {
+    text-decoration: none;
+    color: var(--main-nav-color);
+    margin: 0;
+}
+#pig-settings {
+     display: flex;
+     align-items: center;
+}
+#pig-type {
+    color: var(--color7);
+    font-size: 1.5rem;
+}
+#pig-stats {
+    text-decoration: none;
+    color: var(--main-nav-color);
+}
+
 #pig-data-body {
-    margin: 2rem 0;
+    margin: 2rem 0 1rem 0;
     border-radius: 10px;
     border: black 2px solid;
     background-color: var(--main-bg-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: .5rem 1rem .75rem 1rem;
 }
-#pig-name-dropdown {
-    margin: 0;
+#pigs-list{
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
 }
 
 .accordion-item:last-of-type .accordion-button.collapsed {
