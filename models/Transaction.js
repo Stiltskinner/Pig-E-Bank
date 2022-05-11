@@ -15,6 +15,10 @@ Transaction.init(
       type: DataTypes.DECIMAL(10,2),
       allowNull: false,
     },
+    merchant: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
