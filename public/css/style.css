@@ -13,6 +13,7 @@
 
 body {
     background-image: url("https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig%20background%20blur.png?raw=true");
+    height: 100vh;
 }
 
 header {
@@ -27,6 +28,7 @@ header {
 
 form {
     width: 100%;
+}
 
 .container {
     display: flex;
@@ -101,7 +103,6 @@ nav a img {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -142,10 +143,15 @@ nav a img {
     border-radius: 10px;
     box-shadow: 2px 2px white;
     border: solid white 2px;
-    box-shadow: 2px 2px 5px #ff5d9065;
+    box-shadow: 5px 5px 5px #ff5d9065;
 }
-#playMoneyFooter:active{
+
+#playMoneyFooter:hover{
     box-shadow: 2px 2px var(--main-nav-color);
+}
+
+#playMoneyFooter:active{
+    width:79%;
 }
 #playMoneyFooter a {
     text-decoration: none;
@@ -177,38 +183,6 @@ nav a img {
     align-items: center;
     margin: 2rem 0;
 }
-#savingsTitle {
-    margin: 0;
-}
-
-#savingsFooterTotal {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--main-feed-color);
-    width:80%;
-    border-radius: 10px;
-    margin-top: 1rem;
-}
-
-#savingsViewPigsFooter {
-    text-align: center;
-    background-color: var(--main-feed-color);
-    width:60%;
-    margin-top: 1rem;
-    border-radius: 10px;
-    box-shadow: 2px 2px white;
-    border: solid white 2px;
-    box-shadow: 2px 2px 5px #ff5d9065;
-}
-#savingsViewPigsFooter:active{
-    box-shadow: 2px 2px var(--main-nav-color);
-}
-.savingsFooter a {
-    text-decoration: none;
-    color: black;
-    
-}
 
 #savingsHeader {
     display: flex;
@@ -223,6 +197,43 @@ nav a img {
 #savingsHeader:hover {
     width: 98%;
     box-shadow: 5px 5px black;
+}
+#savingsTitle {
+    margin: 0;
+}
+
+#savingsFooterTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width:80%;
+    border-radius: 10px;
+    margin-top: 1rem;
+    border: 0;
+}
+
+#savingsViewPigsFooter {
+    text-align: center;
+    background-color: var(--main-feed-color);
+    width:60%;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px white;
+    border: solid white 2px;
+    box-shadow: 5px 5px 5px #ff5d9065;
+}
+#savingsViewPigsFooter:active {
+    width:59%;
+}
+
+#savingsViewPigsFooter:hover{
+    box-shadow: 2px 2px var(--main-nav-color);
+}
+.savingsFooter a {
+    text-decoration: none;
+    color: black;
+    
 }
 
 #savingsLink {
@@ -244,10 +255,11 @@ nav a img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--main-feed-color);
+    background-color: white;
     width:80%;
     border-radius: 10px;
     margin-top: 1rem;
+    border: 0;
 }
 #checkingsViewPigsFooter {
     text-align: center;
@@ -257,15 +269,15 @@ nav a img {
     border-radius: 10px;
     box-shadow: 2px 2px white;
     border: solid white 2px;
-    box-shadow: 2px 2px 5px #ff5d9065;
+    box-shadow: 5px 5px 5px #ff5d9065;
 }
 
 #checkingsViewPigsFooter:hover{
-    box-shadow: 0 0;
+    box-shadow: 2px 2px var(--main-nav-color);
 }
 
 #checkingsViewPigsFooter:active{
-    box-shadow: 2px 2px var(--main-nav-color);
+    width:59%;
 }
 
 .checkingsFooter a {
@@ -293,7 +305,7 @@ nav a img {
 }
 
 #recentTransactions {
-    margin-top: 0;
+    margin-top: -1rem;
     box-shadow: 10px 10px var(--color7);
     border-radius: 25px;
     border: var(--main-nav-color) solid 2px;
@@ -327,16 +339,78 @@ ul {
 }
 
 #pigs {
-    /* border: black solid 2px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 3.5rem; 
     border-radius: 25px;
-    width: 90%;
+    width: 100%;
+    height: 60%;
+    background-color: #FF87AB;
+    padding: 2rem;
+    box-shadow: 10px 10px var(--color1);
+    overflow-y: scroll;
 }
-.accordion-button {
-    border-radius:  25px !important; 
-    
-}
+
 #pig-item {
-    border-radius: 25px;
+    border-radius: 10px;
+    background-color: #FF87AB;
+}
+
+#pig-data-body {
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: black 2px solid;
+}
+#pig-name-amount {
+    margin:0;
+}
+#pig-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    width: 100%;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    color: #212529;
+    border: 0;
+    background-color: white;
+    box-shadow: 10px 10px var(--main-feed-color);
+    border-radius: 10px;
+    overflow-anchor: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.accordion-flush .accordion-item .accordion-button {
+    border-radius: 10px;
+}
+
+#pig-header:not(.collapsed) {
+    color: var(--main-nav-color);
+    background-color: #e7f1ff;
+    box-shadow: 10px 10px var(--main-feed-color) ;
+}
+
+#pig-header::after {
+    flex-shrink: 0;
+    width: 2rem;
+    margin-left: 0 ;
+    content: "";
+    background-image: url("https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig.png?raw=true");
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .5s ease-in-out;
+}
+
+#pig-header:not(.collapsed)::after {
+    background-image: url("https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig.png?raw=true");
+    transform: rotate(-360deg);
 }
 
 footer {
