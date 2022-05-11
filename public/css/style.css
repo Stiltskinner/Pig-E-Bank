@@ -83,7 +83,25 @@ background-color: var(--main-nav-color);
     color: black;
     margin-right: 3rem;
 }
+#sign-out{
+color: white;
+padding: 5px;
+border: 2px solid;
+border-radius: 5px;
+border-color: white !important;
+margin: 5px 10px 0px 0px;
+}
+
 #submit_button {
+    background-color: var(--main-nav-color);
+    border-color: white;
+}
+
+#submit_button label{
+    color: white;
+}
+
+#submit_create_pig {
     background-color: var(--main-nav-color);
     border-color: white;
 }
@@ -91,6 +109,11 @@ background-color: var(--main-nav-color);
 #login_button {
     background-color: var(--main-nav-color);
     border-color: white;
+}
+
+#offcanvasbutton {
+    color: white;
+    width: 100%;
 }
 
 #column-one {
