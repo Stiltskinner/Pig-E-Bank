@@ -80,21 +80,23 @@ background-color: var(--main-nav-color);
     margin-right: 2rem;
 }
 
-#sign-out {
-    text-decoration: none;
-    color: black;
-    margin-right: 3rem;
-    margin-bottom: 0;
-    cursor: pointer;
-
+#hamburger {
+    margin: 0 0 0 1rem;
 }
+
 #sign-out{
-color: white;
-padding: 5px;
-border: 2px solid;
-border-radius: 5px;
-border-color: white !important;
-margin: 5px 10px 0px 0px;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: white !important;
+    margin: 0 2rem 0 0;
+    cursor: pointer;
+}
+
+#create-a-pig {
+    height: fit-content;
 }
 
 #submit_button {
@@ -121,6 +123,13 @@ margin: 5px 10px 0px 0px;
     width: 100%;
 }
 
+#off-canvas {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
 #column-one {
     display: flex;
     flex-wrap: wrap;
@@ -129,6 +138,13 @@ margin: 5px 10px 0px 0px;
 }
 
 #column-two {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#column-three {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -334,7 +350,7 @@ margin: 5px 10px 0px 0px;
 }
 
 #recentTransactions {
-    margin-top: -1rem;
+    margin-top: 2rem;
     box-shadow: 10px 10px var(--color7);
     border-radius: 25px;
     border: var(--main-nav-color) solid 2px;
@@ -371,10 +387,9 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 3.5rem; 
+    margin-top: 2rem; 
     border-radius: 25px;
     width: 100%;
-    height: 60%;
     background-color: #FF87AB;
     padding: 2rem;
     box-shadow: 10px 10px var(--color1);
