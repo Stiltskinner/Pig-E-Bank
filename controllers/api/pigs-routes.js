@@ -14,6 +14,39 @@ router.get('/', withAuth, async (req, res) => {
     }
   });
 
+// Get all savings pigs
+router.get('/savings/:id', withAuth, async (req, res) => {
+  try {
+    const pigsData = await Pigs.findAll({
+      include: [{ all: true, nested: true }],
+      where: {
+        user_id: req.params.id,
+        is_savings: true
+      }
+    });
+    res.status(200).json(pigsData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Get all checking pigs
+router.get('/checking/:id', withAuth, async (req, res) => {
+  try {
+    const pigsData = await Pigs.findAll({
+      include: [{ all: true, nested: true }],
+      where: {
+        user_id: req.params.id,
+        is_savings: false
+      }
+    });
+    res.status(200).json(pigsData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
   // get one pig
 router.get('/:id', withAuth, async (req, res) => {
     try {

@@ -12,7 +12,7 @@ const pigsData = [
   },
   {
     name: 'utilities',
-    is_savings: true,
+    is_savings: false,
     amount_due: 100,
     amount_held: 200,
     direct_deposit: '2022-06-10',

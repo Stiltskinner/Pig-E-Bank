@@ -432,7 +432,7 @@ img, svg {
      display: flex;
      align-items: center;
 }
-#pig-type {
+.pig-type {
     color: var(--color7);
     font-size: 1.5rem;
 }
