@@ -1,6 +1,16 @@
 const router = require('express').Router();
 const { Pigs, User, Money, Transaction  } = require('../models/');
 
+router.get('/'), async (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/dashboard');
+    return;
+  }else {
+    res.redirect('/login');
+    return
+  }
+}
+
 // THIS IS JUST FOR TESTING PURPOSES IT WILL CHANGE IN THE FUTURE
 
 router.get('/dashboard', async (req, res) => {
@@ -21,8 +31,14 @@ router.get('/dashboard', async (req, res) => {
 // END OF TESTER
 
 router.get('/login', (req, res) => {
-  
+  console.log(req.session.loggedIn);
+  if (req.session.loggedIn) {
+    res.redirect('/dashboard');
+    return;
+  }
+
   res.render('login');
+  return;
 });
 
 router.get('/signup', (req, res) => {
