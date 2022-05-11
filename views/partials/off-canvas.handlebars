@@ -1,0 +1,92 @@
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header" id="menuHeader">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Create Pig</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Make a dedicated pig your specific expense</h6>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item" id="submit_button">
+            <button class="btn" id="offcanvasbutton" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Create:
+            </button>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <form>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                    >Name of Pig:</label
+                    >
+                    <input
+                    type="password"
+                    class="form-control"
+                    id="pigName"
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                    >Checkings or Savings?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="isPigChecking">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Checkings
+                        </label>
+                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="isPigSavings">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Savings
+                        </label>
+                        </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                    >Amount Due:</label
+                    >
+                    <input
+                    type="password"
+                    class="form-control"
+                    id="pigAmountDue"
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                    >Allow Direct Deposit?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="isPigChecking">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            No, I would not like Direct Deposit
+                        </label>
+                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="isPigSavings">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Yes, I would like Direct Deposit
+                        </label>
+                        <input type="date"
+                        id="directDepositDate">
+                        </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                    >Expense Due Date?</label
+                    >
+                    <input
+                    type="date"
+                    id="pigDueDate"
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit_create_pig">
+                    Submit
+                </button>
+                </form>
+            </div>
+            </div>
+        </div>
+  </div>
+</div>
+  </div>
+</div>
