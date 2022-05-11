@@ -55,15 +55,16 @@ form {
     height: 150px;
 }
 
+#menuHeader {
+color: white;
+background-color: var(--main-nav-color);
+}
+
 #main-view {
     margin: 3rem;
     display: flex;
     flex-wrap: wrap;
     /* align-items: center; */
-}
-
-nav a img {
-    margin-left: 2rem;
 }
 
 #login {
@@ -416,3 +417,5 @@ ul {
 footer {
     text-align: center; 
 }
+
+
