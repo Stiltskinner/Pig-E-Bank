@@ -7,7 +7,7 @@
       <ul id="transactionsList">
         {{#with user.transactions as |transactions|}}
         {{#each transactions as | transaction |}}
-        <li id="transactionsListEl">$ {{transaction.transaction_amt}} - {{transaction.transaction}} - {{transaction.createdAt}}</li>
+        <li id="transactionsListEl">$ {{transaction.transaction_amt}} - {{transaction.merchant}} - {{format_date transaction.createdAt}}</li>
         {{/each}}
         {{/with}}
       </ul>

@@ -1,22 +1,30 @@
 
-<div class="accordion accordion-flush infinite-scroll" id="pigs" style="">
+<div class="accordion accordion-flush infinite-scroll" id="pigs">
 {{#with user.pigs as | pigs |}}
 {{#each pigs as | pig |}}
   <div class="accordion-item" id="pig-item">
     <h2 class="accordion-header" id="flush-heading{{pig.id}}">
       <button id="pig-header" class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{pig.id}}" aria-expanded="false" aria-controls="flush-collapse{{pig.id}}">
         {{pig.name}} <p id="pig-name-amount">$ {{pig.amount_held}} {{#if pig.amount_due}} / $ {{pig.amount_due}} due {{/if}}</p>
+        <img id="pig-icon" src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig.png?raw=true" style="width: 30px;" alt="pinkpiglogo">
       </button>
     </h2>
     <div id="flush-collapse{{pig.id}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{pig.id}}" data-bs-parent="#accordionFlushExample">
       <div id="pig-data-body"class="accordion-body">
-        <ul>
+        <h3 id="pig-name-dropdown">{{pig.name}}</h3>
+        <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{pig.id}}" aria-expanded="false" aria-controls="flush-collapse{{pig.id}}">
+          <img id="" src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/Pig%20Logo%20White.png?raw=true" style="width: 30px;" alt="whitepiglogo">
+        </button>
+        <ul id="pigsList">
           <li>
             $ {{pig.amount_held}} {{#if pig.amount_due}} / $ {{pig.amount_due}} {{/if}}
           </li>
           {{#if pig.due_date}}
           <li>
             Due on {{pig.due_date}}
+          </li> 
+          <li>
+            Feed Upon Direct Deposit
           </li> 
           {{/if}} 
           
