@@ -1,17 +1,16 @@
 const router = require('express').Router();
 const { Pigs, User, Money, Transaction  } = require('../models/');
 
-router.get('/'), async (req, res) => {
+// THIS IS JUST FOR TESTING PURPOSES IT WILL CHANGE IN THE FUTURE
+
+router.get('/'), (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/dashboard');
     return;
-  }else {
+  }
     res.redirect('/login');
     return
-  }
 }
-
-// THIS IS JUST FOR TESTING PURPOSES IT WILL CHANGE IN THE FUTURE
 
 router.get('/dashboard', async (req, res) => {
   const userData = await User.findByPk(1, {
@@ -43,7 +42,7 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
 
