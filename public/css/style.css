@@ -438,6 +438,7 @@ img, svg {
     color: var(--color7);
     font-size: 1.5rem;
 }
+
 #pig-stats {
     text-decoration: none;
     color: var(--main-nav-color);
