@@ -12,11 +12,23 @@
     <div id="flush-collapse{{pig.id}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{pig.id}}" data-bs-parent="#accordionFlushExample">
       <div id="pig-data-body"class="accordion-body">
         <h3 id="pig-name-dropdown">{{pig.name}}</h3>
-        <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{pig.id}}" aria-expanded="false" aria-controls="flush-collapse{{pig.id}}">
+        <div id="pig-settings">
+          <a id="pig-edit" href="/editpig">edit</a>
+          <div class="dropdown-divider"></div>
+        <button id="box-pig-btn" class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{pig.id}}" aria-expanded="false" aria-controls="flush-collapse{{pig.id}}">
           <img id="" src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/Pig%20Logo%20White.png?raw=true" style="width: 30px;" alt="whitepiglogo">
         </button>
-        <ul id="pigsList">
+        </div>
+        <ul id="pigs-list">
+          {{#if pig.is_savings}}
+          <li id="pig-type">
+            Savings
           <li>
+          {{else}}
+          <li id="pig-type">
+            Checkings
+          <li>
+          {{/if}}
             $ {{pig.amount_held}} {{#if pig.amount_due}} / $ {{pig.amount_due}} {{/if}}
           </li>
           {{#if pig.due_date}}
@@ -27,8 +39,8 @@
             Feed Upon Direct Deposit
           </li> 
           {{/if}} 
-          
         </ul>
+        <a id="pig-stats" href="/stats">stats <i class="bi bi-arrow-right-short"></i></a>
       </div>
     </div>
   </div>

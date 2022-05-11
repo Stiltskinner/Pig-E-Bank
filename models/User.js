@@ -38,7 +38,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [4]
+        len: [8]
       }
     }
   },
@@ -47,6 +47,12 @@ User.init(
       // set up beforeCreate lifecycle "hook" functionality
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      beforeBulkCreate: async (newUserData) => {
+        for (let i=0; i<newUserData.length; i++) {
+          newUserData[i].password = await bcrypt.hash(newUserData[i].password, 10)
+        }
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
