@@ -1,9 +1,8 @@
-const createPigHandler = async function(event) {
+const editPigHandler = async function(event) {
     event.preventDefault();
   
     const nameEl = document.querySelector('#pigName');
-    const checkingRadioEl = document.querySelector('#flexRadioDefault1');
-    const savingsRadioEl = document.querySelector('#flexRadioDefault2');
+    const checkingRadioEl = document.querySelector('#isPigChecking');
     const pigAmountDueEl = document.querySelector('#pigAmountDue');
     const isPigDDNoEl = document.querySelector('#isPigDDNo');
     const isPigDDYesEl = document.querySelector('#isPigDDYes');
@@ -11,18 +10,18 @@ const createPigHandler = async function(event) {
     const pigDueDateEl = document.querySelector('#pigDueDate');
     const userIdContainerEl = document.querySelector('#user-id-container');
 
-
+    console.log("checkingRadioEl",checkingRadioEl.value,"pigAmountDueEl",pigAmountDueEl.value,"isPigDDNoEl", isPigDDNoEl.value, "directDepositDateEl", directDepositDateEl.value, "pigDueDateEl", pigDueDateEl.value )
   if (!nameEl.value) {
     alert('Please enter a name for your pig');
     return;
   }
-
   let isSavings;
-  if (checkingRadioEl.checked) {
+  if (checkingRadioEl.value) {
       isSavings = false;
   } else {
       isSavings = true;
   }
+  console.log("isSavings", isSavings)
 
   let amountDue;
   if (!pigAmountDueEl.value) {
@@ -30,15 +29,16 @@ const createPigHandler = async function(event) {
   } else {
       amountDue = pigAmountDueEl.value;
   }
+  console.log("amount due", amountDue)
 
 let isDD;
-  if(!directDepositDateEl.value) {
+  if(isPigDDNoEl.value) {
     isDD=null
   }
   else {
       isDD=directDepositDateEl.value;
   }
-
+  console.log("isDD", isDD)
 
 let dueDate;
 if(!pigDueDateEl.value) {
@@ -46,9 +46,9 @@ if(!pigDueDateEl.value) {
 } else {
     dueDate=pigDueDateEl.value;
 }
-
+console.log("dueDate", dueDate)
     const response = await fetch('/api/pigs/', {
-      method: 'POST',
+      method: 'PUT',
       body: JSON.stringify({
         name: nameEl.value,
         is_savings: isSavings,
@@ -66,7 +66,8 @@ if(!pigDueDateEl.value) {
       alert('Failed to create pig');
     }
   };
-
+  
   document
-    .querySelector('#create-pig-form')
-    .addEventListener('submit', createPigHandler);
+    .querySelector('#edit-pig-form')
+    .addEventListener('submit', editPigHandler);
+  
