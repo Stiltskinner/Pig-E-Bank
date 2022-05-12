@@ -134,7 +134,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 4. Hugo Sanchez - hugoarmandosanchez530@gmail.com
 
 
-Project Link: (https://infinite-falls-27891.herokuapp.com/)
+[Project Link](https://infinite-falls-27891.herokuapp.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
