@@ -457,6 +457,8 @@ img, svg {
 #pig-stats {
     text-decoration: none;
     color: var(--main-nav-color);
+    border: none;
+    background-color: var(--main-bg-color);
 }
 
 #pig-data-body {
@@ -510,4 +512,12 @@ footer {
     text-align: center; 
 }
 
-
+.mini-chart {
+    background-color: var(--main-feed-color);
+    padding: 1rem;
+    border-radius: 10px;
+    border: var(--color7) 2px solid;
+    box-shadow: 10px 10px var(--color1);
+    margin-left: 2rem;
+    align-self: flex-start;
+}
