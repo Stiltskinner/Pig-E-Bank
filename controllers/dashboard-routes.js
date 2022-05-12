@@ -8,6 +8,17 @@ router.get('/', withAuth, async (req, res) => {
             include: [{ model: Pigs}, { model: Money }, { model: Transaction }],
           })
           const user = userData.get({ plain: true });
+          const userMoney = user.money.checking
+          const userPigs = user.pigs;
+          const userPigsAmountArr = [];
+          for (let i = 0; i<userPigs.length; i++) {
+            userPigsAmountArr.push(userPigs[i].amount_held)
+          }
+          let totalPigsAmount = 0;
+          for (let i = 0; i<userPigsAmountArr.length; i++) {
+            totalPigsAmount += userPigsAmountArr[i];
+          }
+          console.log("userPigs amount", totalPigsAmount);
           res.render('accounts', {
             layout: 'dashboard',
             user
