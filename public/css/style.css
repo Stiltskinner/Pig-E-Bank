@@ -57,6 +57,10 @@ form {
     height: 150px;
 }
 
+.hidden {
+    display:none;
+}
+
 #menuHeader {
 color: white;
 background-color: var(--main-nav-color);
