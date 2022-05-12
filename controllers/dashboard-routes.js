@@ -12,16 +12,19 @@ router.get('/', withAuth, async (req, res) => {
           const userPigs = user.pigs;
           const userPigsAmountArr = [];
           for (let i = 0; i<userPigs.length; i++) {
-            userPigsAmountArr.push(userPigs[i].amount_held)
+            let parsedPig = parseFloat(userPigs[i].amount_held)
+            userPigsAmountArr.push(parsedPig)
           }
-          let totalPigsAmount = 0;
-          for (let i = 0; i<userPigsAmountArr.length; i++) {
-            totalPigsAmount += userPigsAmountArr[i];
-          }
-          console.log("userPigs amount", totalPigsAmount);
+        let totalPigAmount = userPigsAmountArr.reduce(function(a, b) {
+          return a+b;
+        });
+        
+        let safeToSpend = userMoney-totalPigAmount;
+
           res.render('accounts', {
             layout: 'dashboard',
-            user
+            user,
+            safeToSpend
           });
           return;
     }
