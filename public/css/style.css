@@ -446,6 +446,8 @@ img, svg {
 
 #pig-edit {
     text-decoration: none;
+    background-color: var(--main-bg-color);
+    border: none;
     color: var(--main-nav-color);
     margin: 0;
 }
@@ -458,7 +460,7 @@ img, svg {
     font-size: 1.5rem;
 }
 
-#pig-stats {
+.pig-stats {
     text-decoration: none;
     color: var(--main-nav-color);
     border: none;
