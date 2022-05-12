@@ -8,19 +8,27 @@ const signupFormHandler = async function(event) {
   const passwordInputEl = document.querySelector('#passwordInput');
   const verifyPasswordInputEl = document.querySelector('#verifyPasswordInput');
 
+if (emailInputEl.value !== verifyEmailInputEl.value) {
+  alert('Please ensure that your email matches your verify email');
+  return;
+}
+
+if (passwordInputEl.value !== verifyPasswordInputEl.value) {
+  alert('Please ensure that your password matches your verify password');
+  return;
+}
+
   const response = await fetch('/api/user/', {
     method: 'POST',
     body: JSON.stringify({
-      firstName: firstNameEl.value,
-      lastName: lastNameEl.value,
-      emailInput: emailInputEl.value,
-      verifyEmailInput: verifyEmailInputEl.value,
-      passwordInput: passwordInputEl.value,
-      verifyPasswordInput: verifyPasswordInputEl.value,
+      first_name: firstNameEl.value,
+      last_name: lastNameEl.value,
+      email: emailInputEl.value,
+      password: passwordInputEl.value,
     }),
     headers: { 'Content-Type': 'application/json' },
   });
-
+console.log("response", response)
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
