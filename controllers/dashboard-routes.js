@@ -20,7 +20,6 @@ router.get('/', withAuth, async (req, res) => {
         });
         
         let safeToSpend = userMoney-totalPigAmount;
-
           res.render('accounts', {
             layout: 'dashboard',
             user,

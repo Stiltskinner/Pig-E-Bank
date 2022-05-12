@@ -13,7 +13,7 @@ const dueDateEl = document.querySelector('#date');
 const amountDueEl = document.querySelector('#amountdue');
 const directDepositDateEl = document.querySelector('#directdepositdate');
 
-const updatePig = () => {
+const updatePig = async () => {
     const response = await fetch('/api/pigs/', {
         method: 'PUT',
         body: JSON.stringify({
