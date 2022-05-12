@@ -405,10 +405,11 @@ ul {
 #pigs {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 2rem; 
     border-radius: 25px;
     width: 100%;
+    
     background-color: #FF87AB;
     padding: 2rem;
     box-shadow: 10px 10px var(--color1);
