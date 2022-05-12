@@ -75,13 +75,23 @@ background-color: var(--main-nav-color);
 
 #login {
     text-decoration: none;
-    color:black;
-    margin-right: 2rem;
+    color: white;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: white !important;
+    margin: 0 2rem 0 0;
+    cursor: pointer;
 }
 #signup {
     text-decoration: none;
-    color:black;
-    margin-right: 2rem;
+    color: white;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: white !important;
+    margin: 0 2rem 0 0;
+    cursor: pointer;
 }
 
 #hamburger {
@@ -358,12 +368,17 @@ background-color: var(--main-nav-color);
     box-shadow: 10px 10px var(--color7);
     border-radius: 25px;
     border: var(--main-nav-color) solid 2px;
-    width: 80%;
+    width: 100%;
     height: fit-content;
 
 }
 
 #recentTransactionsHeader{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    background-color: #FF5D8F;
     border: none;
     border-radius: 25px 25px 0 0;
 }
