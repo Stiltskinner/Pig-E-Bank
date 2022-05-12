@@ -4,9 +4,70 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body" id="off-canvas">
+        <!--First Card: Create A Pig-->
         <div id="create-a-pig" class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Create-a-Pig</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Make a dedicated pig your specific expense</h6>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item" id="submit_button">
+                        <button class="btn" id="offcanvasbutton" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Create:
+                        </button>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form id="create-pig-form">
+                                    <div class="mb-3">
+                                        <label for="pig-name-input" class="form-label">Name of Pig:</label>
+                                        <input type="text" class="form-control" id="pigName" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Checking or Savings Pigs" class="form-label">Checkings or
+                                            Savings?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Checking
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Savings
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="amount-due" class="form-label">Amount Due - Optional  Choose for recurring expenses</label>
+                                        <input type="number" step=".01" min="0" class="form-control"
+                                            id="pigAmountDue" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Direct-Deposit-Input" class="form-label">Direct Deposit Date - Optional Choose to auto add money to pig on direct deposit</label>
+                                        <input type="date" id="directDepositDate">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Expense-Due-Date" class="form-label">Expense Due Date - Optional  Choose for recurring expenses</label>
+                                        <input type="date" id="pigDueDate" />
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" id="submit_create_pig">
+                                        Submit
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Second Card: Feed A Pig-->
+        <div id="feed-a-pig" class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Feed-a-Pig</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Make a dedicated pig your specific expense</h6>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item" id="submit_button">

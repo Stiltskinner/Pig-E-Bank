@@ -366,7 +366,7 @@ background-color: var(--main-nav-color);
 #recentTransactions {
     margin-top: 2rem;
     box-shadow: 10px 10px var(--color7);
-    border-radius: 25px;
+    border-radius: 30px;
     border: var(--main-nav-color) solid 2px;
     width: 100%;
     height: fit-content;
