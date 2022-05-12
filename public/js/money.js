@@ -1,15 +1,17 @@
-const updateSavings = async () => {
-
-    const savingAmountEl = document.querySelector('#savingsLink');
+const updateSavings = async (event) => {
+    event.preventDefault();
+    const userIdContainerEl = document.querySelector('#user-id-container');
+    const savingAmountEl = document.querySelector('#user-savings');
     const currentSavings = parseInt(savingAmountEl.textContent);
-    const savingAdjustEl = document.querySelector('#');
-    const savingsAdjust = parseInt(savingAdjustEl.textContent);
+    const savingAdjustEl = document.querySelector('#savings-feed-amt');
+    const savingsAdjust = parseInt(savingAdjustEl.value);
     // Needs savings adjust value pulled from form
     let newSavings = currentSavings+savingsAdjust;
     const response = await fetch('/api/money/', {
         method: 'PUT',
         body: JSON.stringify({
-            savings: newSavings
+            savings: newSavings,
+            user_id: userIdContainerEl.value
         }),
         headers: { 'Content-Type': 'application/json' },
       });
@@ -20,10 +22,12 @@ const updateSavings = async () => {
       }
     };
 
-const updateChecking = async () => {
-
-    const checkingAmountEl = document.querySelector('#checkingsLink');
+const updateChecking = async (event) => {
+    event.preventDefault();
+    const checkingAmountEl = document.querySelector('#user-checking');
     const currentChecking = parseInt(checkingAmountEl.textContent);
+    const checkingAdjustEl = document.querySelector('#savings-feed-amt');
+    const checkingAdjust = parseInt(checkingAdjustEl.value);
     // Needs checking adjust value pulled from form
     let newChecking = currentChecking+checkingAdjust;
     const response = await fetch('/api/money/', {
@@ -43,5 +47,5 @@ const updateChecking = async () => {
 const savingsForm = document.querySelector("#savings-form");
 const checkingForm = document.querySelector("#checking-form");
 
-savingsForm.addEventListener('click', updateSavings);
-checkingForm.addEventListener('click', updateChecking);
+savingsForm.addEventListener('submit', updateSavings);
+checkingForm.addEventListener('submit', updateChecking);

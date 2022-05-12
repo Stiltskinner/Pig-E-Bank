@@ -31,7 +31,7 @@ router.put('/', withAuth, async (req, res) => {
   try {
     const money = await Money.update(req.body, {
       where: {
-        id: req.params.id,
+        user_id: req.body.user_id,
       },
     });
     money.savings = req.body.savings;
