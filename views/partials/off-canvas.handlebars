@@ -78,15 +78,11 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <form id="feed-savings-form">
+                                <form id="savings-form">
                                     <div class="mb-3">
-                                        <label for="pig-name-input" class="form-label">Name of Pig:</label>
-                                        <input type="text" class="form-control" id="pigName" />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="amount-due" class="form-label">Amount Due - Optional  Choose for recurring expenses</label>
+                                        <label for="amount-due" class="form-label">Enter how much money you would like to add:</label>
                                         <input type="number" step=".01" min="0" class="form-control"
-                                            id="pigAmountDue" />
+                                            id="savings-feed-amt" />
                                     </div>
                                     <button type="submit" class="btn btn-primary" id="submit_create_pig">
                                         Submit
@@ -102,7 +98,7 @@
         <div id="feed-checkings" class="card" style="width: 18rem;">
             <div class="card-body" id="off-canvas-cards">
                 <h5 class="card-title">Feed Checkings</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Add money towards your Savings</h6>
+                <h6 class="card-subtitle mb-2 text-muted">Add money towards your Checkings</h6>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item" id="submit_button">
                         <button class="btn" id="offcanvasbutton" type="button" data-bs-toggle="collapse"
@@ -112,15 +108,11 @@
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <form id="feed-checking-form">
+                                <form id="checking-form">
                                     <div class="mb-3">
-                                        <label for="pig-name-input" class="form-label">Name of Pig:</label>
-                                        <input type="text" class="form-control" id="pigName" />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="amount-due" class="form-label">Amount Due - Optional  Choose for recurring expenses</label>
+                                        <label for="amount-due" class="form-label">Enter how much money you would like to add:</label>
                                         <input type="number" step=".01" min="0" class="form-control"
-                                            id="pigAmountDue" />
+                                            id="checking-feed-amt" />
                                     </div>
                                     <button type="submit" class="btn btn-primary" id="submit_create_pig">
                                         Submit
