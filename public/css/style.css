@@ -102,6 +102,10 @@ background-color: var(--main-nav-color);
     width: 700px;
 }
 
+#welcome {
+    margin-top: -1rem;
+}
+
 #welcome-msg {
     text-decoration: underline;
 }
@@ -112,6 +116,10 @@ background-color: var(--main-nav-color);
 
 #hamburger {
     margin: 0 0 0 1rem;
+    
+}
+#hamburger-anchor {
+    box-shadow: none;
 }
 
 #sign-out{
@@ -129,7 +137,9 @@ background-color: var(--main-nav-color);
     height: fit-content;
     margin-bottom: 20px;
 }
-
+#exit-button {
+    box-shadow: none;
+}
 #submit_button {
     background-color: var(--main-nav-color);
     border-color: white;
@@ -186,7 +196,7 @@ background-color: var(--main-nav-color);
     flex-direction: column;
     align-items: center;
     border: none;
-    margin-top:2rem;
+    margin-top:1rem;
     width: 90%;
 }
 
@@ -204,7 +214,7 @@ background-color: var(--main-nav-color);
     border-radius: 25px;
     border: solid black 2px;
     box-shadow: 10px 10px;
-
+    font-size: 2rem;
 }
 #playMoneyAmount:hover {
     width: 93%;
@@ -256,7 +266,7 @@ background-color: var(--main-nav-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 #savingsHeader {
@@ -284,15 +294,17 @@ background-color: var(--main-nav-color);
     background-color: white;
     width:80%;
     border-radius: 10px;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border: 0;
+    font-size: 1.5rem;
 }
 
 #savingsViewPigsFooter {
     text-align: center;
     background-color: var(--main-feed-color);
     width:60%;
-    margin-top: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
     border-radius: 10px;
     box-shadow: 2px 2px white;
     border: solid white 2px;
@@ -321,7 +333,7 @@ background-color: var(--main-nav-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 #checkingsTitle {
     margin:0;
@@ -333,14 +345,15 @@ background-color: var(--main-nav-color);
     background-color: white;
     width:80%;
     border-radius: 10px;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border: 0;
+    font-size: 1.5rem;
 }
 #checkingsViewPigsFooter {
     text-align: center;
     background-color: var(--main-feed-color);
     width:60%;
-    margin-top: 1rem;
+    margin-top: 0;
     border-radius: 10px;
     box-shadow: 2px 2px white;
     border: solid white 2px;
@@ -421,11 +434,10 @@ ul {
 #pigs {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 2rem; 
     border-radius: 25px;
     width: 100%;
-    
     background-color: #FF87AB;
     padding: 2rem;
     box-shadow: 10px 10px var(--color1);
@@ -436,6 +448,7 @@ ul {
     border-radius: 10px;
     background-color: #FF87AB;
     border: 0;
+    margin: 0 0 1rem 0;
 }
 
 #pig-header {
@@ -476,7 +489,8 @@ img, svg {
     margin:0;
 }
 
-#pig-edit {
+#pig-edit-button {
+    box-shadow: none;
     text-decoration: none;
     background-color: var(--main-bg-color);
     border: none;
@@ -492,7 +506,7 @@ img, svg {
     font-size: 1.5rem;
 }
 
-.pig-stats {
+#pig-stats {
     text-decoration: none;
     color: var(--main-nav-color);
     border: none;
@@ -550,12 +564,27 @@ footer {
     text-align: center; 
 }
 
-.mini-chart {
-    background-color: var(--main-feed-color);
+.mini-chart, .mini-chart-2, .mini-chart-3 {
+    background-color: white;
     padding: 1rem;
     border-radius: 10px;
     border: var(--color7) 2px solid;
-    box-shadow: 10px 10px var(--color1);
-    margin-left: 2rem;
-    align-self: flex-start;
+    box-shadow: 10px 10px var(--main-nav-color);
+    margin-bottom: 1rem;
 }
+.mini-chart {
+    align-self: flex-start;
+    margin-left: 3rem;
+    margin-top: -2rem;
+}
+
+.mini-chart-2 {
+    align-self: flex-end;
+}
+
+.mini-chart-3 {
+    align-self: flex-start;
+    margin-left: 3rem;
+}
+
+

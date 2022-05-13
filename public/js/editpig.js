@@ -1,9 +1,15 @@
-const pigIdSelect = document.querySelector('input[id="edit"]')
+// const pigsDiv = document.querySelector('#pigs')
+const pigIdSelect = document.querySelectorAll('input[class=edit-value]')
 const pigId = pigIdSelect.value
-console.log(pigId)
+// const pigIds = []
+// for (let pig of pigIdSelect){
+//     let num = pig.value
+//     pigIds.push(num)
+// }
+// console.log(pigIds)
 
 
-$('#edit').on('click', async function() {
+$('#pig-edit-button').on('click', async function() {
     $(`#pig${pigId}`).modal('show');
 })
 
