@@ -27,11 +27,11 @@ try {
 });
 
 // Update money
-router.put('/', withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   try {
     const money = await Money.update(req.body, {
       where: {
-        user_id: req.body.user_id,
+        user_id: req.params.id
       },
     });
     money.savings = req.body.savings;

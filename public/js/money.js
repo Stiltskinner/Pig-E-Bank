@@ -1,17 +1,18 @@
 const updateSavings = async (event) => {
     event.preventDefault();
-    const userIdContainerEl = document.querySelector('#user-id-container');
+    const userIdContainerEl = document.querySelector('#user-id-holder');
+    const userId = userIdContainerEl.value;
     const savingAmountEl = document.querySelector('#user-savings');
-    const currentSavings = parseInt(savingAmountEl.textContent);
+    const currentSavings = parseFloat(savingAmountEl.textContent);
     const savingAdjustEl = document.querySelector('#savings-feed-amt');
-    const savingsAdjust = parseInt(savingAdjustEl.value);
+    const savingsAdjust = parseFloat(savingAdjustEl.value);
+    console.log('user id',userId);
     // Needs savings adjust value pulled from form
     let newSavings = currentSavings+savingsAdjust;
-    const response = await fetch('/api/money/', {
+    const response = await fetch(`/api/money/${userId}`, {
         method: 'PUT',
         body: JSON.stringify({
             savings: newSavings,
-            user_id: userIdContainerEl.value
         }),
         headers: { 'Content-Type': 'application/json' },
       });
@@ -24,16 +25,18 @@ const updateSavings = async (event) => {
 
 const updateChecking = async (event) => {
     event.preventDefault();
+    const userIdContainerEl = document.querySelector('#user-id-holder');
+    const userId = userIdContainerEl.value;
     const checkingAmountEl = document.querySelector('#user-checking');
-    const currentChecking = parseInt(checkingAmountEl.textContent);
-    const checkingAdjustEl = document.querySelector('#savings-feed-amt');
-    const checkingAdjust = parseInt(checkingAdjustEl.value);
+    const currentChecking = parseFloat(checkingAmountEl.textContent);
+    const checkingAdjustEl = document.querySelector('#checking-feed-amt');
+    const checkingAdjust = parseFloat(checkingAdjustEl.value);
     // Needs checking adjust value pulled from form
     let newChecking = currentChecking+checkingAdjust;
-    const response = await fetch('/api/money/', {
+    const response = await fetch(`/api/money/${userId}`, {
         method: 'PUT',
         body: JSON.stringify({
-            checking: newChecking
+            checking: newChecking,
         }),
         headers: { 'Content-Type': 'application/json' },
         });
