@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Stiltsskinner/Pig-E-Bank">
-    <img src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig-logo.png" alt="Logo" width="100" height="100">
+    <img src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig.png" alt="Logo" width="100" height="100">
   </a>
 
 <h3 align="center">Pig-E-Bank</h3>
