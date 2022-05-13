@@ -44,7 +44,7 @@ form {
     background-color: #FF87AB;
     color: white;
     display: flex;
-    width: 500px;
+    width: 600px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -92,6 +92,22 @@ background-color: var(--main-nav-color);
     border-color: white !important;
     margin: 0 2rem 0 0;
     cursor: pointer;
+}
+
+#signup-box1 {
+    margin-right:10%;
+}
+
+#signup-box2 {
+    width: 700px;
+}
+
+#welcome-msg {
+    text-decoration: underline;
+}
+
+#welcome-img {
+    height:100px;
 }
 
 #hamburger {
