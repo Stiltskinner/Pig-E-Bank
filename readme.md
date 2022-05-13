@@ -24,8 +24,6 @@
     <a href="https://github.com/Stiltskinner/Pig-E-Bank"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Stiltskinner/Pig-E-Bank">View Demo</a>
-    ·
     <a href="https://github.com/Stiltskinner/Pig-E-Bank/issues">Report Bug</a>
     ·
     <a href="https://github.com/Stiltskinner/Pig-E-Bank/issues">Request Feature</a>
