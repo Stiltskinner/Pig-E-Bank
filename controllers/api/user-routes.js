@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
       req.session.email = newUser.email;
       req.session.loggedIn = true;
 
-      res.status(200).json(newUser);
+      res.json(newUser);
     });
   } catch (err) {
     res.status(500).json(err);

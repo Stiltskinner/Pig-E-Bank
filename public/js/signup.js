@@ -28,9 +28,19 @@ if (passwordInputEl.value !== verifyPasswordInputEl.value) {
     }),
     headers: { 'Content-Type': 'application/json' },
   });
-console.log("response", response)
   if (response.ok) {
-    document.location.replace('/dashboard');
+    console.log('response', response)
+    const moneyresponse = await fetch('/api/money/', {
+      method: 'POST',
+      body: JSON.stringify({
+        checking: 0,
+        savings: 0
+      }),
+      headers: { 'Content-Type': 'application/json' },
+    })
+    if (moneyresponse.ok) {
+      document.location.replace('/dashboard');
+    }
   } else {
     alert('Failed to sign up');
   }
