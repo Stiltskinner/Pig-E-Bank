@@ -8,7 +8,7 @@ router.get('/', withAuth, async (req, res) => {
             include: [{ model: Pigs}, { model: Money }, { model: Transaction }],
           })
           const user = userData.get({ plain: true });
-          const userMoney = user.money.checking
+          const userMoney = 0//user.money.checking
           const userPigs = user.pigs;
           const userPigsAmountArr = [];
           let totalPigAmount = 0
