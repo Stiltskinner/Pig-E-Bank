@@ -14,7 +14,7 @@
         <h3 id="pig-name-dropdown">{{pig.name}}</h3>
         <div id="pig-settings">
           <input style="display: none;" class="edit-value" value="{{pig.id}}">
-          <button id="pig{{pig.id}}" type="button" class="btn btn-primary edit-button" data-bs-toggle="modal" data-bs-target="#pig{{pig.id}}">
+          <button id="pig-edit-button" type="button" class="btn btn-primary edit-button" data-bs-toggle="modal" data-bs-target="#pig{{pig.id}}">
           edit
           </button>
         <button id="box-pig-btn" class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{pig.id}}" aria-expanded="false" aria-controls="flush-collapse{{pig.id}}">
@@ -42,7 +42,7 @@
           </li> 
           {{/if}} 
         </ul>
-        <button id='pig-stats' onclick="getPigsDataToChart()" type="submit">stats <i class="bi bi-arrow-right-short"></i></button>
+        <button id='pig-stats' onclick="getPigsDataToChart(), getAccountData()" type="submit">stats <i class="bi bi-arrow-right-short"></i></button>
       </div>
     </div>
   </div>

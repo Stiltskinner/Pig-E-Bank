@@ -112,6 +112,10 @@ background-color: var(--main-nav-color);
 
 #hamburger {
     margin: 0 0 0 1rem;
+    
+}
+#hamburger-anchor {
+    box-shadow: none;
 }
 
 #sign-out{
@@ -129,7 +133,9 @@ background-color: var(--main-nav-color);
     height: fit-content;
     margin-bottom: 20px;
 }
-
+#exit-button {
+    box-shadow: none;
+}
 #submit_button {
     background-color: var(--main-nav-color);
     border-color: white;
@@ -421,11 +427,10 @@ ul {
 #pigs {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 2rem; 
     border-radius: 25px;
     width: 100%;
-    
     background-color: #FF87AB;
     padding: 2rem;
     box-shadow: 10px 10px var(--color1);
@@ -436,6 +441,7 @@ ul {
     border-radius: 10px;
     background-color: #FF87AB;
     border: 0;
+    margin: 0 0 1rem 0;
 }
 
 #pig-header {
@@ -476,7 +482,8 @@ img, svg {
     margin:0;
 }
 
-#pig-edit {
+#pig-edit-button {
+    box-shadow: none;
     text-decoration: none;
     background-color: var(--main-bg-color);
     border: none;
@@ -550,23 +557,27 @@ footer {
     text-align: center; 
 }
 
-.mini-chart {
+.mini-chart, .mini-chart-2, .mini-chart-3 {
     background-color: var(--main-feed-color);
     padding: 1rem;
     border-radius: 10px;
     border: var(--color7) 2px solid;
     box-shadow: 10px 10px var(--color1);
-    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+.mini-chart {
     align-self: flex-start;
+    margin-left: 3rem;
+    margin-top: -2rem;
 }
 
 .mini-chart-2 {
-    background-color: var(--main-feed-color);
-    padding: 1rem;
-    border-radius: 10px;
-    border: var(--color7) 2px solid;
-    box-shadow: 10px 10px var(--color1);
-    margin-left: 2rem;
-    align-self: flex-start;
+    align-self: flex-end;
 }
+
+.mini-chart-3 {
+    align-self: flex-start;
+    margin-left: 3rem;
+}
+
 

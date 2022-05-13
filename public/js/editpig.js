@@ -1,5 +1,6 @@
 // const pigsDiv = document.querySelector('#pigs')
-// const pigIdSelect = document.querySelectorAll('input[class=edit-value]')
+const pigIdSelect = document.querySelectorAll('input[class=edit-value]')
+const pigId = pigIdSelect.value
 // const pigIds = []
 // for (let pig of pigIdSelect){
 //     let num = pig.value
@@ -8,9 +9,9 @@
 // console.log(pigIds)
 
 
-// $('#edit').on('click', async function() {
-//     $(`#pig${pigId}`).modal('show');
-// })
+$('#pig-edit-button').on('click', async function() {
+    $(`#pig${pigId}`).modal('show');
+})
 
 const savePigBtn = document.querySelector("#save-btn")
 const pigNameEl = document.querySelector('#pigname');

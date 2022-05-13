@@ -26,7 +26,7 @@ const getAccountData = async () => {
     for (let account of accounts){
         account.user.id == userid ? usermoney.push(account) : null;
     }
-    return console.log(usermoney)
+    return chart3(usermoney)
 }
 
 const chart = (userpigs) => {
@@ -92,6 +92,47 @@ const myChart2 = new Chart(ctx2, {
         datasets: [{
             label: 'Pig Amounts',
             data: pigsAmountDue,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+}
+
+const chart3 = (usermoney) => {
+    console.log(usermoney)
+    const userAccount = [usermoney[0].savings, usermoney[0].checking] 
+
+const ctx3 = document.getElementById('accounts-chart').getContext('2d')  
+const myChart3 = new Chart(ctx3, {
+    type: 'bar',
+    data: {
+        labels: ['Savings', 'Checkings'],
+        datasets: [{
+            label: 'Account',
+            data: userAccount,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
