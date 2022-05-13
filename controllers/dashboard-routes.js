@@ -8,7 +8,7 @@ router.get('/', withAuth, async (req, res) => {
             include: [{ model: Pigs}, { model: Money }, { model: Transaction }],
           })
           const user = userData.get({ plain: true });
-          let userMoney;
+          let userMoney = 0;
           if (user.money.checking) {
             userMoney=user.money.checking;
           }
