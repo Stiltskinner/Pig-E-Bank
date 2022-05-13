@@ -1,22 +1,5 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -30,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Stiltsskinner/Pig-E-Bank">
-    <img src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig.png" alt="Logo" width="100" height="100">
+    <img src="https://github.com/Stiltskinner/Pig-E-Bank/blob/main/images/pig-logo.png" alt="Logo" width="100" height="100">
   </a>
 
 <h3 align="center">Pig-E-Bank</h3>
@@ -38,14 +21,14 @@
   <p align="center">
     The Pig-e-Bank app allows users to split up their paychecks into "pigs" which hold money for different purposes.  Users will have a pig for bills, entertainment, savings, or whatever the user would like to create. Money is deposited into the app by the user, the amount is up to the user. 
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Stiltskinner/Pig-E-Bank"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/Stiltskinner/Pig-E-Bank">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/Stiltskinner/Pig-E-Bank/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/Stiltskinner/Pig-E-Bank/issues">Request Feature</a>
   </p>
 </div>
 
@@ -82,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Product Name Screen Shot](./Pig%20E-Bank%20Demo.gif)
 
 
 
@@ -91,9 +74,11 @@
 
 
 ### Built With
-* [Chart.js](https://www.chartjs.org)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
+* [Express](https://expressjs.com/)
+* [Node](https://nodejs.org/en/)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
