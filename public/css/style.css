@@ -475,7 +475,7 @@ img, svg {
     font-size: 1.5rem;
 }
 
-.pig-stats {
+#pig-stats {
     text-decoration: none;
     color: var(--main-nav-color);
     border: none;
@@ -542,3 +542,14 @@ footer {
     margin-left: 2rem;
     align-self: flex-start;
 }
+
+.mini-chart-2 {
+    background-color: var(--main-feed-color);
+    padding: 1rem;
+    border-radius: 10px;
+    border: var(--color7) 2px solid;
+    box-shadow: 10px 10px var(--color1);
+    margin-left: 2rem;
+    align-self: flex-start;
+}
+
