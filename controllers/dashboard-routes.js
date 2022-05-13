@@ -29,7 +29,7 @@ router.get('/', withAuth, async (req, res) => {
           }
 console.log('totalPigAmount',totalPigAmount);
         let safeToSpend = userMoney-totalPigAmount;
-        safeToSpend.toFixed(2);
+        safeToSpend = safeToSpend.toFixed(2);
           res.render('accounts', {
             layout: 'dashboard',
             user,
