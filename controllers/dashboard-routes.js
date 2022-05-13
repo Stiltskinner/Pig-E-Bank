@@ -8,9 +8,32 @@ router.get('/', withAuth, async (req, res) => {
             include: [{ model: Pigs}, { model: Money }, { model: Transaction }],
           })
           const user = userData.get({ plain: true });
+          let userMoney = 0;
+          if (user.money.checking) {
+            userMoney=parseFloat(user.money.checking);
+          }
+          const userPigs = user.pigs;
+          console.log(userPigs);
+          let userPigsAmountArr = [0];
+          let totalPigAmount = 0;
+          if (userPigs===[]) {
+            totalPigAmount = 0;
+          } else {
+            for (let i = 0; i<userPigs.length; i++) {
+              let parsedPig = parseFloat(userPigs[i].amount_held);
+              userPigsAmountArr.push(parsedPig);
+            }
+            totalPigAmount = userPigsAmountArr.reduce(function(a, b) {
+              return a+b
+            })
+          }
+console.log('totalPigAmount',totalPigAmount);
+        let safeToSpend = userMoney-totalPigAmount;
+        safeToSpend = safeToSpend.toFixed(2);
           res.render('accounts', {
             layout: 'dashboard',
-            user
+            user,
+            safeToSpend
           });
           return;
     }

@@ -10,7 +10,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="edit-pig-form">
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="pigname">Pig Name:</label>
@@ -28,8 +28,8 @@
             </div>
           </div>
           <div class="form-row">
-              <div class="form-group col-md-6">
-              <label for="directdeposit">Direct Deposit Reactor:</label>
+              {{!-- <div class="form-group col-md-6">
+              <label for="amountdue">Direct Deposit Reactor:</label>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
               <label class="form-check-label" for="inlineRadio1">Yes</label>
@@ -38,18 +38,18 @@
               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
               <label class="form-check-label" for="inlineRadio2">No</label>
             </div>
-            </div>
+            </div> --}}
             <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="dd-date">Direct Deposit Date</label>
-              <input type="integer" class="form-control" id="dd-date" value="{{pig.direct_deposit}}">
+              <label for="amountdue">Direct Deposit Date</label>
+              <input type="integer" class="form-control" id="directdepositdate" value="{{pig.direct_deposit}}">
             </div>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Delete Pig</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" id="save-btn">Save changes</button>
       </div>
     </div>
   </div>
@@ -57,4 +57,8 @@
 {{/each}}
 {{/with}}
 
+<<<<<<< HEAD
 
+=======
+<script src="/public/js/editpig.js"></script>
+>>>>>>> main

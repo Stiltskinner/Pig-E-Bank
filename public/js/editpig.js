@@ -7,17 +7,35 @@
 // }
 // console.log(pigIds)
 
-// const showModal = (event) =>{
-//     const target = event.target.id
-//     console.log(target)
-//     modal(target)
-// }
 
-const modal = (id) => {
-$(`${id}`).on('click', function() {
-    $(`#pig${id}`).modal('show');
+$('#edit').on('click', async function() {
+    $(`#pig${pigId}`).modal('show');
 })
-}
+
+const savePigBtn = document.querySelector("#save-btn")
+const pigNameEl = document.querySelector('#pigname');
+const dueDateEl = document.querySelector('#date');
+const amountDueEl = document.querySelector('#amountdue');
+const directDepositDateEl = document.querySelector('#directdepositdate');
+
+const updatePig = async () => {
+    const response = await fetch('/api/pigs/', {
+        method: 'PUT',
+        body: JSON.stringify({
+            id: pigId,
+            name: pigNameEl.value,
+            amount_due: amountDueEl.value,
+            direct_deposit: directDepositDateEl.value,
+            due_date: dueDateEl.value,
+        }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (response.ok) {
+        document.location.replace('/dashboard');
+      } else {
+        alert('Failed to update pig');
+      }
+    };
 
 
-// pigsDiv.addEventListener('click', showModal)
+savePigBtn.addEventListener('click', updatePig)
