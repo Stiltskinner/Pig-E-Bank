@@ -65,6 +65,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+[Deployed App - Try it out yourself!](https://infinite-falls-27891.herokuapp.com/)
+
 ![Product Name Screen Shot](./Pig%20E-Bank%20Demo.gif)
 
 
@@ -117,9 +119,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 2. William Wong - billycwong19@gmail.com
 3. Rene Vasquez - rene4801@gmail.com
 4. Hugo Sanchez - hugoarmandosanchez530@gmail.com
-
-
-[Project Link](https://infinite-falls-27891.herokuapp.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
