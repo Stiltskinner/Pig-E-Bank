@@ -8,9 +8,9 @@
 // console.log(pigIds)
 
 
-$('#edit').on('click', async function() {
-    $(`#pig${pigId}`).modal('show');
-})
+// $('#edit').on('click', async function() {
+//     $(`#pig${pigId}`).modal('show');
+// })
 
 const savePigBtn = document.querySelector("#save-btn")
 const pigNameEl = document.querySelector('#pigname');

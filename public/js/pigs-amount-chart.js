@@ -2,6 +2,7 @@
 const userid = document.querySelector('#single-pig-stats-chart').value
 const minichart = document.querySelector('.mini-chart')
 const minichart2 = document.querySelector('.mini-chart-2')
+const minichart3 = document.querySelector('.mini-chart-3')
 console.log(userid)
 
 const getPigsDataToChart = async () => {
@@ -15,6 +16,17 @@ const getPigsDataToChart = async () => {
         pig.user.id == userid ? userpigs.push(pig) : null;
     }
     return chart(userpigs), chart2(userpigs);
+}
+const getAccountData = async () => {
+    minichart3.setAttribute('style', 'display: initial;')
+    console.log("hello again")
+    const getAccounts = await fetch('http://localhost:3001/api/money');
+    const accounts = await getAccounts.json()
+    let usermoney = []
+    for (let account of accounts){
+        account.user.id == userid ? usermoney.push(account) : null;
+    }
+    return console.log(usermoney)
 }
 
 const chart = (userpigs) => {
